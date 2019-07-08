@@ -56,7 +56,9 @@
 <script src="assets/bootstrap-table-1.15.2/bootstrap-table.min.js"></script>
 <script src="js/bart.js"></script>
 <script>
-    getDepartures(BERKELEY, MONTGOMERY, "#berkeley-departures");
-    getDepartures(MONTGOMERY, BERKELEY, "#montgomery-departures");
+    $(document).ready(function() {
+        getDepartures(BERKELEY, MONTGOMERY, "#berkeley-departures");
+        getDepartures(MONTGOMERY, BERKELEY, "#montgomery-departures");
+    });
 </script>
 </html>

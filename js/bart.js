@@ -16,10 +16,8 @@ function getDepartures(fromStation, toStation, table) {
         "a": "4",
         "l": "1"
     };
-    console.log(makeUrl(SCHEDULE_ENDPOINT, params));
     $.getJSON(makeUrl(SCHEDULE_ENDPOINT, params), function (data) {
         let departures = data.root.schedule.request.trip;
-        console.log(departures);
         departures.forEach(function (departure) {
             let row = makeRow(departure);
             $(table).bootstrapTable('append', row);
