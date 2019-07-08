@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BART Departures To/From Berkeley to Montgomery</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1> Berkeley Departures </h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Departure Time</th>
+                <th scope="col">Origin</th>
+                <th scope="col">Destination</th>
+                <th scope="col"># Transfers</th>
+            </tr>
+            </thead>
+            <tbody id="berkeley-departures">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <h1> Montgomery Departures </h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Departure Time</th>
+                <th scope="col">Origin</th>
+                <th scope="col">Destination</th>
+                <th scope="col"># Transfers</th>
+            </tr>
+            </thead>
+            <tbody id="montgomery-departures">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bart.js"></script>
+<script>
+    console.log(getDepartures(BERKELEY, MONTGOMERY));
+</script>
+</html>
