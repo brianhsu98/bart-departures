@@ -20,7 +20,7 @@ function getDepartures(fromStation, toStation, table) {
         let departures = data.root.schedule.request.trip;
         departures.forEach(function (departure) {
             let row = makeRow(departure);
-            $(table).bootstrapTable('append', row);
+            table.bootstrapTable('append', row);
         })
     });
 }
@@ -39,8 +39,10 @@ function makeUrl(endpoint, params) {
 }
 
 function makeRow(departureObject) {
+    console.log(departureObject)
     return {
         departureTime: departureObject["@origTimeMin"],
+        destinationTime: departureObject["@destTimeMin"],
         origin: departureObject["@origin"],
         destination: departureObject["@destination"],
         numTransfers: departureObject.leg.length - 1

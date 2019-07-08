@@ -21,6 +21,7 @@
             <thead>
             <tr>
                 <th data-field="departureTime" scope="col">Departure Time</th>
+                <th data-field="destinationTime" scope="col">Arrival Time</th>
                 <th data-field="origin" scope="col">Origin</th>
                 <th data-field="destination" scope="col">Destination</th>
                 <th data-field="numTransfers" scope="col"># Transfers</th>
@@ -37,6 +38,7 @@
             <thead>
             <tr>
                 <th data-field="departureTime" scope="col">Departure Time</th>
+                <th data-field="destinationTime" scope="col">Arrival Time</th>
                 <th data-field="origin" scope="col">Origin</th>
                 <th data-field="destination" scope="col">Destination</th>
                 <th data-field="numTransfers" scope="col"># Transfers</th>
@@ -57,8 +59,8 @@
 <script src="js/bart.js"></script>
 <script>
     $(document).ready(function() {
-        getDepartures(BERKELEY, MONTGOMERY, "#berkeley-departures");
-        getDepartures(MONTGOMERY, BERKELEY, "#montgomery-departures");
+        getDepartures(BERKELEY, MONTGOMERY, $("#berkeley-departures"));
+        getDepartures(MONTGOMERY, BERKELEY, $("#montgomery-departures"));
     });
 </script>
 </html>
