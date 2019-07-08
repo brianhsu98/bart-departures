@@ -7,35 +7,42 @@
     <link rel="stylesheet" href="assets/bootstrap-table-1.15.2/bootstrap-table.min.css"/>
 </head>
 <body>
+<div id="header">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            BART Departures To/From Berkeley & Montgomery
+        </a>
+    </nav>
+</div>
 <div class="container">
-    <div class="row">
+    <div class="row mt-5">
         <h1> Berkeley Departures </h1>
-        <table class="table">
+        <table data-toggle="table" class="table" id="berkeley-departures">
             <thead>
             <tr>
-                <th scope="col">Departure Time</th>
-                <th scope="col">Origin</th>
-                <th scope="col">Destination</th>
-                <th scope="col"># Transfers</th>
+                <th data-field="departureTime" scope="col">Departure Time</th>
+                <th data-field="origin" scope="col">Origin</th>
+                <th data-field="destination" scope="col">Destination</th>
+                <th data-field="numTransfers" scope="col"># Transfers</th>
             </tr>
             </thead>
-            <tbody id="berkeley-departures">
+            <tbody>
 
             </tbody>
         </table>
     </div>
-    <div class="row">
+    <div class="row mt-5">
         <h1> Montgomery Departures </h1>
-        <table class="table">
+        <table data-toggle="table" class="table" id="montgomery-departures">
             <thead>
             <tr>
-                <th scope="col">Departure Time</th>
-                <th scope="col">Origin</th>
-                <th scope="col">Destination</th>
-                <th scope="col"># Transfers</th>
+                <th data-field="departureTime" scope="col">Departure Time</th>
+                <th data-field="origin" scope="col">Origin</th>
+                <th data-field="destination" scope="col">Destination</th>
+                <th data-field="numTransfers" scope="col"># Transfers</th>
             </tr>
             </thead>
-            <tbody id="montgomery-departures">
+            <tbody>
 
             </tbody>
         </table>
@@ -49,6 +56,7 @@
 <script src="assets/bootstrap-table-1.15.2/bootstrap-table.min.js"></script>
 <script src="js/bart.js"></script>
 <script>
-    console.log(getDepartures(BERKELEY, MONTGOMERY));
+    getDepartures(BERKELEY, MONTGOMERY, "#berkeley-departures");
+    getDepartures(MONTGOMERY, BERKELEY, "#montgomery-departures");
 </script>
 </html>

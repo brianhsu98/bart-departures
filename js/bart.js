@@ -5,7 +5,7 @@ const SCHEDULE_ENDPOINT = "/sched.aspx?";
 const BERKELEY = "dbrk";
 const MONTGOMERY = "mont";
 
-function getDepartures(fromStation, toStation) {
+function getDepartures(fromStation, toStation, table) {
     params = {
         "cmd": "depart",
         "orig": fromStation,
@@ -18,11 +18,12 @@ function getDepartures(fromStation, toStation) {
     };
     console.log(makeUrl(SCHEDULE_ENDPOINT, params));
     $.getJSON(makeUrl(SCHEDULE_ENDPOINT, params), function (data) {
-        let departures = data.root.schedule.request;
+        let departures = data.root.schedule.request.trip;
         console.log(departures);
-        for (let departure in departures) {
-            console.log(departure);
-        }
+        departures.forEach(function (departure) {
+            let row = makeRow(departure);
+            $(table).bootstrapTable('append', row);
+        })
     });
 }
 
@@ -39,6 +40,11 @@ function makeUrl(endpoint, params) {
     return URL;
 }
 
-function addRow(tableId, items) {
-
+function makeRow(departureObject) {
+    return {
+        departureTime: departureObject["@origTimeMin"],
+        origin: departureObject["@origin"],
+        destination: departureObject["@destination"],
+        numTransfers: departureObject.leg.length - 1
+    }
 }
