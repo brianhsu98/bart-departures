@@ -9,7 +9,7 @@ For now, though, if you are so inclined, you could simply change the parameters 
 
 ## Roadmap
 
-[] Add customizable to/from locations, probably through a dropdown.
-[] Figure out how to do nice loading boxes, instead of just having them be blank
-[] Improve the aesthetic
-[] profit??
+- [ ] Add customizable to/from locations, probably through a dropdown.
+- [ ] Figure out how to do nice loading boxes, instead of just having them be blank
+- [ ] Improve the aesthetic
+- [ ] profit??

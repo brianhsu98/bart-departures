@@ -1,5 +1,5 @@
 const API_KEY = "MW9S-E7SL-26DU-VV8V";
-const API = "http://api.bart.gov/api";
+const API = "https://api.bart.gov/api";
 const DEPARTURE_ENDPOINT = "/etd.aspx?";
 const SCHEDULE_ENDPOINT = "/sched.aspx?";
 const BERKELEY = "dbrk";
@@ -39,7 +39,6 @@ function makeUrl(endpoint, params) {
 }
 
 function makeRow(departureObject) {
-    console.log(departureObject)
     return {
         departureTime: departureObject["@origTimeMin"],
         destinationTime: departureObject["@destTimeMin"],

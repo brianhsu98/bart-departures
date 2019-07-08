@@ -17,38 +17,42 @@
 <div class="container">
     <div class="row mt-5">
         <h1> Berkeley Departures </h1>
-        <table data-toggle="table" class="table" id="berkeley-departures">
-            <thead>
-            <tr>
-                <th data-field="departureTime" scope="col">Departure Time</th>
-                <th data-field="destinationTime" scope="col">Arrival Time</th>
-                <th data-field="origin" scope="col">Origin</th>
-                <th data-field="destination" scope="col">Destination</th>
-                <th data-field="numTransfers" scope="col"># Transfers</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
     </div>
+        <div class="row">
+            <table data-toggle="table" class="table" id="berkeley-departures">
+                <thead>
+                <tr>
+                    <th data-field="departureTime" scope="col">Departure Time</th>
+                    <th data-field="destinationTime" scope="col">Arrival Time</th>
+                    <th data-field="origin" scope="col">Origin</th>
+                    <th data-field="destination" scope="col">Destination</th>
+                    <th data-field="numTransfers" scope="col"># Transfers</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
     <div class="row mt-5">
         <h1> Montgomery Departures </h1>
-        <table data-toggle="table" class="table" id="montgomery-departures">
-            <thead>
-            <tr>
-                <th data-field="departureTime" scope="col">Departure Time</th>
-                <th data-field="destinationTime" scope="col">Arrival Time</th>
-                <th data-field="origin" scope="col">Origin</th>
-                <th data-field="destination" scope="col">Destination</th>
-                <th data-field="numTransfers" scope="col"># Transfers</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
     </div>
+        <div class="row">
+            <table data-toggle="table" class="table" id="montgomery-departures">
+                <thead>
+                <tr>
+                    <th data-field="departureTime" scope="col">Departure Time</th>
+                    <th data-field="destinationTime" scope="col">Arrival Time</th>
+                    <th data-field="origin" scope="col">Origin</th>
+                    <th data-field="destination" scope="col">Destination</th>
+                    <th data-field="numTransfers" scope="col"># Transfers</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
 </div>
 
 </body>
@@ -58,7 +62,7 @@
 <script src="assets/bootstrap-table-1.15.2/bootstrap-table.min.js"></script>
 <script src="js/bart.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         getDepartures(BERKELEY, MONTGOMERY, $("#berkeley-departures"));
         getDepartures(MONTGOMERY, BERKELEY, $("#montgomery-departures"));
     });
