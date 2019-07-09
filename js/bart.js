@@ -5,7 +5,7 @@ const SCHEDULE_ENDPOINT = "/sched.aspx?";
 const BERKELEY = "dbrk";
 const MONTGOMERY = "mont";
 
-const ABBREVS = {'12th': '12th St. Oakland City Center',
+const ABBREVS = new BiMap({'12th': '12th St. Oakland City Center',
     '16th': '16th St. Mission (SF)',
     '19th': '19th St. Oakland',
     '24th': '24th St. Mission (SF)',
@@ -52,7 +52,8 @@ const ABBREVS = {'12th': '12th St. Oakland City Center',
     'warm': 'Warm Springs/South Fremont',
     'wcrk': 'Walnut Creek',
     'wdub': 'West Dublin',
-    'woak': 'West Oakland'};
+    'woak': 'West Oakland'
+});
 
 function getDepartures(fromStation, toStation, table) {
     params = {
@@ -98,5 +99,9 @@ function makeRow(departureObject) {
 }
 
 function toFullName(abbrev) {
-    return ABBREVS[abbrev.toLowerCase()]
+    if (!ABBREVS.containsKey(abbrev.toLowerCase())) {
+        console.log("Error converting from abbrev");
+        return abbrev;
+    }
+    return ABBREVS.getKey(abbrev.toLowerCase());
 }
