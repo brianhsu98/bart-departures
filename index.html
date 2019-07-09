@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BART Departures To/From Berkeley to Montgomery</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/bootstrap-table-1.15.2/bootstrap-table.min.css"/>
@@ -14,11 +15,13 @@
         </a>
     </nav>
 </div>
+
 <div class="container">
     <div class="row mt-5">
         <h1> Berkeley Departures </h1>
     </div>
-        <div class="row">
+    <div class="row">
+        <div class="table-responsive">
             <table data-toggle="table" class="table" id="berkeley-departures">
                 <thead>
                 <tr>
@@ -30,14 +33,16 @@
                 </tr>
                 </thead>
                 <tbody>
-
+                <div class="spinner"></div>
                 </tbody>
             </table>
         </div>
+    </div>
     <div class="row mt-5">
         <h1> Montgomery Departures </h1>
     </div>
-        <div class="row">
+    <div class="row">
+        <div class="table-responsive">
             <table data-toggle="table" class="table" id="montgomery-departures">
                 <thead>
                 <tr>
@@ -53,6 +58,7 @@
                 </tbody>
             </table>
         </div>
+    </div>
 </div>
 
 </body>
