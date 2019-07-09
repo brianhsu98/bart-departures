@@ -32,4 +32,12 @@ class BiMap{
     containsValue(value) {
         return value in this.inverseMap;
     }
+
+    getKeys() {
+        return Object.keys(this.map);
+    }
+
+    getValues() {
+        return Object.keys(this.inverseMap);
+    }
 }

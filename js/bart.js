@@ -4,7 +4,6 @@ const DEPARTURE_ENDPOINT = "/etd.aspx?";
 const SCHEDULE_ENDPOINT = "/sched.aspx?";
 const BERKELEY = "dbrk";
 const MONTGOMERY = "mont";
-
 const ABBREVS = new BiMap({'12th': '12th St. Oakland City Center',
     '16th': '16th St. Mission (SF)',
     '19th': '19th St. Oakland',
